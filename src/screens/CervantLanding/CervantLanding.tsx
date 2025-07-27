@@ -5,7 +5,6 @@ import { BenefitsSection } from "./sections/BenefitsSection";
 import { CallToActionSection } from "./sections/CallToActionSection";
 import { ClientTestimonialsSection } from "./sections/ClientTestimonialsSection";
 import { FooterSection } from "./sections/FooterSection/FooterSection";
-import { HowItWorksSection } from "./sections/HowItWorksSection";
 import { IntegrationsSection } from "./sections/IntegrationsSection";
 import { YourClientsSection } from "./sections/YourClientsSection";
 import { Navbar } from "../../components/ui/Navbar";

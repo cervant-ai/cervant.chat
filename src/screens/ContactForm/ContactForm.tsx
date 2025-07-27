@@ -2,13 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
-import {
-  NavigationMenu,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-} from "../../components/ui/navigation-menu";
 import { Navbar } from "../../components/ui/Navbar";
+import { FooterSection } from "../CervantLanding/sections/FooterSection/FooterSection";
 
 export const ContactForm = (): JSX.Element => {
   const [formData, setFormData] = useState({
@@ -85,7 +80,7 @@ export const ContactForm = (): JSX.Element => {
         background: "linear-gradient(180deg, #FFE49659 10%, transparent 40%, transparent 100%)"
       }}
     >
-      <div className="max-w-[1279px] md:max-h-[801px] w-full mx-auto mt-[37px] mb-10 rounded-[30px] bg-[#ffe496cc] px-8 pt-6 pb-10 shadow-lg flex flex-col items-center border-0 shadow-none">
+      <div className="max-w-[1279px] md:max-h-[801px] w-full mx-auto mt-[37px] mb-10 rounded-[30px] bg-[#ffe496cc] px-8 pt-6 pb-10 flex flex-col items-center border-0 shadow-none">
         {/* Navbar */}
         <Navbar
           handleBenefitsClick={handleBenefitsClick}
@@ -198,25 +193,7 @@ export const ContactForm = (): JSX.Element => {
       </div>
 
       {/* Footer */}
-      <footer className="flex flex-col items-center justify-center py-8 text-center bg-transparent mt-2">
-        <p className="font-normal italic text-black text-xl leading-[52px]">
-          Copyright © 2025 Kayratech Servicios C.A. All rights reserved.
-        </p>
-        <p className="mt-2 text-base leading-[27px]">
-          <span className="font-light text-black">
-            Es tu momento, crea hoy tu chatbot con{' '}
-          </span>
-          <span className="font-semibold text-zinc-900">Cervant</span>
-          <span className="font-light text-black">.</span>
-        </p>
-        <div className="mt-2 w-[51px] h-[51px] flex items-center justify-center">
-          <img
-            className="w-[42px] h-[42px]"
-            alt="Cervant Logo"
-            src="/layer1.png"
-          />
-        </div>
-      </footer>
+      <FooterSection />
     </div>
   );
 };

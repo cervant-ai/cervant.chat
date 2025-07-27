@@ -1,5 +1,3 @@
-import React from "react";
-
 export const FooterSection = (): JSX.Element => {
   return (
     <footer className="flex flex-col items-center justify-center py-8 text-center px-8">
