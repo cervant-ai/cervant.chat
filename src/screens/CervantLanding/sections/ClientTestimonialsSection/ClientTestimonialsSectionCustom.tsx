@@ -1,8 +1,3 @@
-import React from "react";
-import { Button } from "../../../../components/ui/button";
-import { Card, CardContent } from "../../../../components/ui/card";
-import { Link } from "react-router-dom";
-
 export const ClientTestimonialsSectionCustom = (): JSX.Element => {
 
   return (
@@ -35,7 +30,7 @@ export const ClientTestimonialsSectionCustom = (): JSX.Element => {
 
         <div className="w-full lg:w-1/2 flex items-center">
           <p className="text-[28px] md:text-[40px] leading-[38px] md:leading-[53px] max-sm:text-center">
-            Gestioná tus operaciones desde un solo panel. <span className="font-medium">Visualiza, analiza y optimiza</span> cada interacción. <span className="font-bold italic">Cervant</span> lleva tu atención al siguiente nivel.
+            Gestiona tus operaciones desde un solo panel. <span className="font-medium">Visualiza, analiza y optimiza</span> cada interacción. <span className="font-bold italic">Cervant</span> lleva tu atención al siguiente nivel.
           </p>
         </div>
       </div>
