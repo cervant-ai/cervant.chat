@@ -54,35 +54,66 @@ export const CervantLanding = (): JSX.Element => {
     scrollToSection(integrationsSectionRef);
   };
 
-  // Data for the category cards
-  const categoryCards = [
+   // Data for the category cards
+   const categoryCards = [
     {
       id: 1,
       image: "/logo-02-1-2.png",
-      label: "Comida",
+      label: "Arturos - Fast Food",
       imageClass: "w-[140px] h-[140px] top-5 left-5",
+      link: "https://wa.me/584142856857",
     },
     {
       id: 2,
       image: "/sin-t-tulo-1-2.png",
-      label: "Deportes",
+      label: "Aguilas del Zulia - Deportes",
       imageClass: "w-[106px] h-[97px] top-[42px] left-[37px]",
+      link: "https://wa.me/584162423682",
     },
     {
       id: 3,
       image: "/group.png",
-      label: "Comercio",
+      label: "Sambil - Comercio",
       imageClass: "w-[101px] h-14 top-[62px] left-10",
+      link: "https://wa.me/584122890459",
     },
     {
       id: 4,
       image: "/logo1-2.png",
-      label: "Comida",
+      label: "Diablitos - Comida",
       imageClass: "w-[130px] h-[120px] top-[30px] left-[25px]",
+      link: "https://wa.me/584122313652",
+    },
+    {
+      id: 5,
+      image: "/forum-logo.png",
+      label: "Forum - Retail",
+      imageClass: "w-[212px] h-[194px] top-[0px] left-[0px]",
+      link: "https://wa.me/584126020095",
+    },
+    {
+      id: 6,
+      image: "/clinica-sanlucas.png",
+      label: "Clínica San Lucas - Salud",
+      imageClass: "w-[140px] h-[140px] top-[15px] left-[20px]",
+      link: "https://wa.me/584146081985",
+    },
+    {
+      id: 7,
+      image: "/cei-logo.png",
+      label: "Centro Electronico de idiomas - Educación",
+      imageClass: "w-[200px] h-[180px] top-[-5px] left-[5px]",
+      link: "https://wa.me/584246564293",
+    },
+    {
+      id: 8,
+      image: "/zuum-logo.png",
+      label: "ZuumPark - Entretenimiento",
+      imageClass: "w-[260px] h-[180px] top-[0px] left-[5px]",
     },
   ];
 
-  return (
+ return (
     <div className="bg-white">
       <div className="bg-white  w-full relative"
         style={{
@@ -135,10 +166,16 @@ export const CervantLanding = (): JSX.Element => {
         </div>
 
         {/* Category Cards */}
-        <div className="flex flex-col items-center mt-12 md:mt-24 relative left-1/2 transform -translate-x-1/2">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 justify-center">
+        <div className="flex flex-col items-center mt-12 md:mt-24">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 justify-items-center max-w-6xl mx-auto">
             {categoryCards.map((card, index) => (
-              <div key={card.id} className="flex flex-col items-center ">
+              <a
+                key={card.id}
+                href={card.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center cursor-pointer transition-transform hover:scale-105"
+              >
                 <div className="w-[180px] h-[180px] rounded-[25px] [background:linear-gradient(0deg,rgba(255,255,255,1)_23%,rgba(255,228,150,0.35)_100%)]
                 border-0 shadow-none relative flex items-center justify-center">
                   <img
@@ -150,7 +187,7 @@ export const CervantLanding = (): JSX.Element => {
                 <div className="mt-4 text-center font-bold text-lg">
                   {card.label}
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
