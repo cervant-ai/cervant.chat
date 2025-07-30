@@ -73,14 +73,14 @@ export const CervantLanding = (): JSX.Element => {
     {
       id: 3,
       image: "/group.png",
-      label: "Sambil - Comercio",
+      label: "Sambil - Centro Comercial",
       imageClass: "w-[101px] h-14 top-[62px] left-10",
       link: "https://wa.me/584122890459",
     },
     {
       id: 4,
       image: "/logo1-2.png",
-      label: "Diablitos - Comida",
+      label: "Diablitos - Consumo Masivo",
       imageClass: "w-[130px] h-[120px] top-[30px] left-[25px]",
       link: "https://wa.me/584122313652",
     },
