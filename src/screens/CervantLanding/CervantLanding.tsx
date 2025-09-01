@@ -100,10 +100,10 @@ export const CervantLanding = (): JSX.Element => {
     },
     {
       id: 7,
-      image: "/cei-logo.png",
-      label: "Centro Electronico de idiomas - Educación",
-      imageClass: "w-[200px] h-[180px] top-[-5px] left-[5px]",
-      link: "https://wa.me/584246564293",
+      image: "/tedexis-logo.png",
+      label: "Tedexis - Tecnología - Integraciones con Odoo y Stellar",
+      imageClass: "w-[120px] h-[56px] top-[62px] left-[30px]",
+      link: "https://wa.me/584241438866",
     },
     {
       id: 8,
