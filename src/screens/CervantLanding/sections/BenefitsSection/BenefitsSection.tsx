@@ -57,7 +57,7 @@ export const BenefitsSection = (): JSX.Element => {
     <section className="w-full py-16">
       <div className="container mx-auto">
         <h2 className="text-5xl text-center mb-16 leading-[52px]">
-          <span className="font-normal">¿Con qué Próximamente cuenta</span>
+          <span className="font-normal">¿Con qué Integraciones cuenta</span>
           <span className="font-bold italic"> Cervant</span>
           <span className="font-normal">?</span>
         </h2>
