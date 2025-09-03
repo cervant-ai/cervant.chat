@@ -9,23 +9,47 @@ export const BenefitsSection = (): JSX.Element => {
       icon: "/frame-46.svg",
       isBackgroundImage: false,
       isAvailable: true,
+      customWidth: undefined,
+      customHeight: undefined,
     },
     {
       id: 3,
       icon: "/frame-44.svg",
       isBackgroundImage: false,
       isAvailable: true,
+      customWidth: undefined,
+      customHeight: undefined,
+    },
+    {
+      id: 5,
+      icon: "/odoo-logo.svg",
+      isBackgroundImage: false,
+      isAvailable: true,
+      customWidth: "9rem",
+      customHeight: "9rem",
+    },
+    {
+      id: 6,
+      icon: "/stellar-logo.svg",
+      isBackgroundImage: false,
+      isAvailable: true,
+      customWidth: "10rem",
+      customHeight: "10rem",
     },
     {
       id: 4,
       icon: "/frame-45.svg",
       isBackgroundImage: false,
       isAvailable: false,
+      customWidth: undefined,
+      customHeight: undefined,
     }, {
       id: 2,
       icon: "/frame-42.svg",
       isBackgroundImage: false,
       isAvailable: false,
+      customWidth: undefined,
+      customHeight: undefined,
     },
   ];
 
@@ -33,12 +57,12 @@ export const BenefitsSection = (): JSX.Element => {
     <section className="w-full py-16">
       <div className="container mx-auto">
         <h2 className="text-5xl text-center mb-16 leading-[52px]">
-          <span className="font-normal">¿Con qué integraciones cuenta</span>
+          <span className="font-normal">¿Con qué Próximamente cuenta</span>
           <span className="font-bold italic"> Cervant</span>
           <span className="font-normal">?</span>
         </h2>
 
-        <div className="flex flex-wrap justify-center gap-14 md:max-lg:w-[440px] mx-auto">
+        <div className="flex flex-wrap justify-center gap-14 md:max-lg:w-[440px] mx-auto xl:max-w-6xl xl:justify-center xl:gap-16">
           {integrations.map((integration) => {
             const cardBg = integration.isAvailable
               ? "bg-gradient-to-t from-white via-white to-[#FFE496]/[0.35]"
@@ -66,7 +90,11 @@ export const BenefitsSection = (): JSX.Element => {
                       className="w-24 h-24 opacity-100"
                       alt="Integration platform"
                       src={integration.icon}
-                      style={integration.isAvailable ? {} : { filter: "grayscale(1)", opacity: 0.5 }}
+                      style={{
+                        ...(integration.isAvailable ? {} : { filter: "grayscale(1)", opacity: 0.5 }),
+                        width: integration.customWidth || undefined,
+                        height: integration.customHeight || undefined
+                      }}
                     />
                   )}
                   {!integration.isAvailable && (

@@ -101,7 +101,7 @@ export const CervantLanding = (): JSX.Element => {
     {
       id: 7,
       image: "/tedexis-logo.png",
-      label: "Tedexis - Tecnología - Integraciones con Odoo y Stellar",
+      label: "Tedexis - Tecnología",
       imageClass: "w-[120px] h-[56px] top-[62px] left-[30px]",
       link: "https://wa.me/584241438866",
     },
