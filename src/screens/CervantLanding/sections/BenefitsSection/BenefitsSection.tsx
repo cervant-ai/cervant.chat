@@ -40,7 +40,7 @@ export const BenefitsSection = (): JSX.Element => {
       id: 4,
       icon: "/frame-45.svg",
       isBackgroundImage: false,
-      isAvailable: false,
+      isAvailable: true,
       customWidth: undefined,
       customHeight: undefined,
     }, {
