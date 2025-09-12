@@ -4,6 +4,16 @@ import { Card, CardContent } from "../../../../components/ui/card";
 export const BenefitsSection = (): JSX.Element => {
   // Integration platforms data
   const integrations = [
+    // Instagram
+    {
+      id: 4,
+      icon: "/frame-45.svg",
+      isBackgroundImage: false,
+      isAvailable: true,
+      customWidth: undefined,
+      customHeight: undefined,
+    },
+    // WhatsApp
     {
       id: 1,
       icon: "/frame-46.svg",
@@ -12,6 +22,7 @@ export const BenefitsSection = (): JSX.Element => {
       customWidth: undefined,
       customHeight: undefined,
     },
+    // Telegram
     {
       id: 3,
       icon: "/frame-44.svg",
@@ -37,13 +48,6 @@ export const BenefitsSection = (): JSX.Element => {
       customHeight: "10rem",
     },
     {
-      id: 4,
-      icon: "/frame-45.svg",
-      isBackgroundImage: false,
-      isAvailable: true,
-      customWidth: undefined,
-      customHeight: undefined,
-    }, {
       id: 2,
       icon: "/frame-42.svg",
       isBackgroundImage: false,
@@ -62,7 +66,7 @@ export const BenefitsSection = (): JSX.Element => {
           <span className="font-normal">?</span>
         </h2>
 
-        <div className="flex flex-wrap justify-center gap-14 md:max-lg:w-[440px] mx-auto xl:max-w-6xl xl:justify-center xl:gap-16">
+        <div className="grid max-[425px]:grid-cols-1 grid-cols-2 gap-8 sm:grid-cols-2 md:grid-cols-3 mx-auto xl:max-w-6xl xl:gap-16 place-items-center">
           {integrations.map((integration) => {
             const cardBg = integration.isAvailable
               ? "bg-gradient-to-t from-white via-white to-[#FFE496]/[0.35]"
@@ -71,7 +75,7 @@ export const BenefitsSection = (): JSX.Element => {
             return (
               <Card
                 key={integration.id}
-                className={`w-48 h-48 rounded-3xl border-0 shadow-none relative ${cardBg}`}
+                className={`w-36 h-36 sm:w-44 sm:h-44 md:w-48 md:h-48 rounded-3xl border-0 shadow-none relative ${cardBg}`}
                 style={{
                   background:
                     integration.isAvailable
@@ -87,7 +91,7 @@ export const BenefitsSection = (): JSX.Element => {
                     />
                   ) : (
                     <img
-                      className="w-24 h-24 opacity-100"
+                      className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 opacity-100"
                       alt="Integration platform"
                       src={integration.icon}
                       style={{
