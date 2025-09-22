@@ -110,6 +110,7 @@ export const CervantLanding = (): JSX.Element => {
       image: "/zuum-logo.png",
       label: "ZuumPark - Entretenimiento",
       imageClass: "w-[260px] h-[180px] top-[0px] left-[5px]",
+      link: "https://wa.me/584222024000",
     },
   ];
 
