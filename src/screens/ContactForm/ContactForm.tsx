@@ -4,6 +4,7 @@ import { Button } from "../../components/ui/button";
 import { Card, CardContent } from "../../components/ui/card";
 import { Navbar } from "../../components/ui/Navbar";
 import { FooterSection } from "../CervantLanding/sections/FooterSection/FooterSection";
+import emailjs from '@emailjs/browser';
 
 export const ContactForm = (): JSX.Element => {
   const [formData, setFormData] = useState({
@@ -34,9 +35,21 @@ export const ContactForm = (): JSX.Element => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would typically send the form data to your backend
-    console.log("Form submitted:", formData);
-    setIsSubmitted(true);
+    
+    // Configuración de EmailJS
+    const serviceId = 'service_xh3o8bk'; // Reemplazar con tu Service ID
+    const templateId = 'template_47heq1e'; // Reemplazar con tu Template ID
+    const publicKey = 'm8MNUBhbf_j0bBZAa'; // Reemplazar con tu Public Key
+    
+    // Enviar email usando EmailJS
+    emailjs.sendForm(serviceId, templateId, e.currentTarget, publicKey)
+      .then((result) => {
+        console.log('Email enviado exitosamente:', result.text);
+        setIsSubmitted(true); // Mostrar página de confirmación
+      }, (error) => {
+        console.log('Error al enviar email:', error.text);
+        alert('Hubo un error al enviar el formulario. Por favor, intenta de nuevo.');
+      });
   };
 
   const handleBenefitsClick = (e: React.MouseEvent) => {
@@ -98,7 +111,10 @@ export const ContactForm = (): JSX.Element => {
         </div>
 
         {/* Formulario */}
-        <form onSubmit={handleSubmit} className="w-full max-w-2xl mx-auto space-y-6">
+        <form 
+          onSubmit={handleSubmit}
+          className="w-full max-w-2xl mx-auto space-y-6"
+        >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
               <label htmlFor="name" className="block text-base font-medium text-zinc-700 mb-2">
